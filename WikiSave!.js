@@ -2,9 +2,16 @@
 //By: Princess Platinum
 //Alpha: Do Not Use!
 
-var buttons = '<a class="wikia-button" onclick="saveDoc()">Save</a>&nbsp;<a class="wikia-button" onclick="loadDoc()">Load</a>&nbsp;';
+setInterval(addButtons, 1000);
 
-document.getElementById( 'cke_toolbar_source_1' ).innerHTML += buttons;
+function addButtons() {
+	var buttons = '<a id="save-button" class="wikia-button" onclick="saveDoc()">Save</a>&nbsp;<a id="load-button" class="wikia-button" onclick="loadDoc()">Load</a>&nbsp;';
+	if (document.getElementById( 'save-button' ) || document.getElementById( 'load-button' )) {
+		return;
+	} else {
+		document.getElementById( 'cke_toolbar_source_1' ).innerHTML += buttons;
+	}
+}
 
 function saveDoc() {
     var Document = document.getElementById( 'cke_contents_wpTextbox1' ).getElementsByTagName( 'textarea' )[0].value || 'No Content Saved!';
