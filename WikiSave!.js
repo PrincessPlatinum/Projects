@@ -5,12 +5,12 @@
 setInterval(addButtons, 1000);
 
 function addButtons() {
-	var buttons = '<a id="save-button" class="wikia-button" onclick="saveDoc()">Save</a>&nbsp;<a id="load-button" class="wikia-button" onclick="loadDoc()">Load</a>&nbsp;';
-	if (document.getElementById( 'save-button' ) || document.getElementById( 'load-button' )) {
-		return;
-	} else {
-		document.getElementById( 'cke_toolbar_source_1' ).innerHTML += buttons;
-	}
+    var buttons = '<a id="save-button" class="wikia-button" onclick="saveDoc()">Save</a>&nbsp;<a id="load-button" class="wikia-button" onclick="loadDoc()">Load</a>&nbsp;';
+    if (document.getElementById( 'save-button' ) || document.getElementById( 'load-button' )) {
+	return;
+    } else {
+	document.getElementById( 'cke_toolbar_source_1' ).innerHTML += buttons;
+    }
 }
 
 function saveDoc() {
