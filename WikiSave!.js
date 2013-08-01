@@ -1,4 +1,4 @@
-//WikiSave!
+//WikiSave! adds the ability to save an article to your browser so that you may continue working on it later. This only works if you are editing in source mode!
 //By: Princess Platinum
 //Alpha: Do Not Use!
 
