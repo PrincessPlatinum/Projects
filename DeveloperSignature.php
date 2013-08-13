@@ -11,7 +11,7 @@
 $wgHooks['ParserFirstCallInit'][] = 'wfSigCreate';
 
 function wfSigCreate(&$parser) {
-	$parser->setHook( 'staff', 'wfMakeDevSignature' );
+	$parser->setHook( 'dev', 'wfMakeDevSignature' );
 	return true;
 }
 
